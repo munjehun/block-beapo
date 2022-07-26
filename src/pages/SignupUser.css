@@ -1,0 +1,96 @@
+.signup_user {
+  display: flex;
+  justify-content: center;
+}
+.signup_user .form_container {
+  width: 400px;
+  height: 300px;
+  margin: 50px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup_user .title {
+  font-weight: bold;
+  font-size: 28px;
+  margin: 5px 0 25px 0;
+  color: rgb(0, 158, 66);
+  margin-bottom: 40px;
+}
+
+.signup_user .input_section {
+  display: flex;
+  width: 600px;
+}
+
+.signup_user .inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.signup_user .inputs > div {
+  display: flex;
+  align-items: center;
+}
+
+.signup_user .inputs > div > input {
+  flex: 1 1 auto;
+  margin-right: 3px;
+}
+
+.signup_user .inputs > div > button {
+  width: 100px;
+  height: 33px;
+  border: none;
+  background-color: rgb(0, 158, 66);
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+}
+
+.signup_user .inputs > div > button:hover {
+  color: green;
+  background-color: white;
+  border: 2px solid green;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.signup_user .inputs input {
+  border: none;
+  margin: 3px 0;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: rgba(239, 255, 234, 0.932);
+  margin: 10px 0;
+}
+
+.signup_user .submit {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.signup_user .submit button {
+  width: 150px;
+  height: 45px;
+  border: none;
+  background-color: rgb(0, 158, 66);
+  border-radius: 25px;
+  color: white;
+  font-size: 20px;
+  margin-top: 25px;
+}
+.signup_user .submit button:hover {
+  color: green;
+  background-color: white;
+  font-weight: bold;
+  border: 2px solid green;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}

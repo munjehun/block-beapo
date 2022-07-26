@@ -1,0 +1,112 @@
+.workregister {
+  /* width: 1200px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.workregister_container {
+  width: 1200px;
+  display: flex;
+  margin-bottom: 100px;
+}
+.register_ment {
+  padding: 50px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.work_about {
+  width: 50%;
+  box-sizing: border-box;
+  /* float: left; */
+}
+
+.work_about > ul > li {
+  font-size: 20px;
+  margin: 70px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.work_about > ul > li > textarea {
+  border: none;
+  background-color: rgb(225, 250, 217);
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.hope_price {
+  width: 50%;
+  box-sizing: border-box;
+  float: right;
+  margin-top: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hope_price_input {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.register_button {
+  display: flex;
+  justify-content: center;
+}
+
+.register_button button {
+  width: 240px;
+  height: 60px;
+  border: none;
+  background-color: rgb(0, 158, 66);
+  border-radius: 30px;
+  color: white;
+  font-size: 22px;
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+.register_button button:hover {
+  color: green;
+  background-color: white;
+  font-weight: bold;
+  border: 2px solid green;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.work_about button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  background-color: rgb(0, 158, 66);
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+}
+
+.work_about input {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(225, 250, 217);
+  margin-left: 20px;
+}
+
+.hope_price input {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(225, 250, 217);
+  margin-right: 10px;
+}
+
+.work_about select {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(225, 250, 217);
+  margin-left: 20px;
+}

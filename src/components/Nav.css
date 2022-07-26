@@ -1,0 +1,29 @@
+.nav_link {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px;
+}
+.nav_link > a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: rgb(42, 150, 20);
+}
+
+.nav_link > button {
+  border: none;
+  background-color: white;
+  color: rgb(42, 150, 20);
+}
+.nav_link > button:hover {
+  color: rgb(0, 0, 192);
+}
+
+.nav_logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.nav_logo > img {
+  cursor: pointer;
+  width: 260px;
+}

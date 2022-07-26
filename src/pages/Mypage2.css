@@ -1,0 +1,40 @@
+.mypage2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mypage2 > div:first-child {
+  display: flex;
+  justify-content: start;
+  width: 1200px;
+}
+
+.mypage2 .나의구매요청목록 {
+  font-weight: bold;
+  font-size: 35px;
+  margin: 40px 0 0 40px;
+}
+
+.mypage2 .container__detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mypage2 .pictures_list {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 50px 0 100px;
+  width: 1200px;
+}
+
+.mypage2 .picture {
+  display: flex;
+  justify-content: center;
+}
+
+.mypage2 .wellcome_ment > div {
+  display: inline-block;
+  width: 50%;
+}
