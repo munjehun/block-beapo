@@ -24,12 +24,44 @@
 }
 
 .painter_detail .purchase_requests {
+  display: flex;
+  flex-direction: column;
   width: 700px;
   padding: 0 20px;
+  /* border: 1px solid darkblue; */
+  justify-content: center;
+  align-items: center;
 }
 
+.painter_detail .purchase_requests .contract_complete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: rgb(136, 187, 134);
+  border-radius: 50px;
+  width: 500px;
+  height: 70px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+.painter_detail .purchase_requests .no_request {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: rgb(136, 187, 134);
+  border-radius: 50px;
+  width: 500px;
+  height: 70px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
 .painter_detail .purchase_requests > ul {
   display: flex;
+  width: 100%;
   align-items: center;
   text-align: center;
   margin-top: 20px;
