@@ -23,7 +23,7 @@ function ProductCardnew({
     setTradeState(trade_state);
     setProps({ page });
 
-    if (page === "general_mypage") {
+    if (page == "general_mypage") {
       console.log("trade_state : ", trade_state);
       switch (trade_state) {
         case "1":

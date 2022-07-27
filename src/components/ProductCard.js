@@ -21,7 +21,7 @@ function ProductCard({
   useEffect(() => {
     setTradeState(trade_state);
 
-    if (page === "mypage1") {
+    if (page == "mypage1") {
       console.log("trade_state : ", trade_state);
       switch (trade_state) {
         case "1":
@@ -59,7 +59,7 @@ function ProductCard({
       }
     }
 
-    if (page === "mypage2") {
+    if (page == "mypage2") {
       console.log("trade_state : ", trade_state);
       switch (trade_state) {
         case "1":
@@ -93,7 +93,7 @@ function ProductCard({
       }
     }
 
-    if (page === "main") {
+    if (page == "main") {
       setButtonText("자세히 보기");
     }
   }, []);
@@ -116,7 +116,7 @@ function ProductCard({
 
     switch (tradeState) {
       case "2":
-        if (page === "mypage2") {
+        if (page == "mypage2") {
           navigate(`/offlineContract_user/${id}/${trade_user_id}`);
         }
         break;
@@ -133,9 +133,9 @@ function ProductCard({
         <img src={img} alt=""></img>
       </div>
       <div className="price_painter">
-        {page === "mypage1" ? ( //작가마이페이지에 출력될 때, 요청 수가 나오도록
+        {page == "mypage1" ? ( //작가마이페이지에 출력될 때, 요청 수가 나오도록
           <div>계약 요청 수 : {requests}</div>
-        ) : page === "mypage2" ? ( //일반 마이페이지에 출력될 때, 거래 상태 나오도록
+        ) : page == "mypage2" ? ( //일반 마이페이지에 출력될 때, 거래 상태 나오도록
           <div>{trade}</div>
         ) : (
           <>

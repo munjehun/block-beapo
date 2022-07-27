@@ -35,7 +35,7 @@ function ProductCardButtom({
         break;
     }
 
-    if (page === "general_mypage") {
+    if (page == "general_mypage") {
       console.log("trade_state : ", trade_state);
       switch (trade_state) {
         case "1":

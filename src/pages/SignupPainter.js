@@ -17,11 +17,11 @@ function SignupPainter() {
   const onSubmitHandler = () => {
     //유효성 검사
     if (
-      Id.length === 0 ||
-      Password.length === 0 ||
-      Name.length === 0 ||
-      Birth.length === 0 ||
-      artistname === 0
+      Id.length == 0 ||
+      Password.length == 0 ||
+      Name.length == 0 ||
+      Birth.length == 0 ||
+      artistname == 0
     ) {
       alert("정보를 모두 입력해주세요");
       return;
@@ -72,7 +72,7 @@ function SignupPainter() {
       })
       .then((res) => {
         const data = res.data.message;
-        if (data === "already in use") {
+        if (data == "already in use") {
           alert("이미 사용중인 아이디입니다.");
         } else {
           alert("사용 가능한 아이디입니다.");

@@ -21,7 +21,7 @@ function OfflineContractCheckUser({ user_artistname, id, trade_user_id }) {
   //체크박스 유효성 검사
   useEffect(() => {
     getPaintingInfo();
-    if (checkedList.length === 4) {
+    if (checkedList.length == 4) {
       //4개 모두 체크돼야 계약하기 버튼 누를 수 있도록
       setAllChecked(true);
     } else if (checkedList.length !== 4) {

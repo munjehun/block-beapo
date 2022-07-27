@@ -27,7 +27,7 @@ function Login() {
   }, []);
 
   const onSubmitHandler = () => {
-    if (Id.length === 0 || Password.length === 0) {
+    if (Id.length == 0 || Password.length == 0) {
       alert("ID와 비밀번호를 모두 입력해주세요");
       return;
       //return이 있어야 로그인요청으로 더이상 진행 안됨.
@@ -77,7 +77,7 @@ function Login() {
   };
 
   const onKeyPress = (e) => {
-    if (e.key === "Enter") {
+    if (e.key == "Enter") {
       onSubmitHandler();
     }
   };
