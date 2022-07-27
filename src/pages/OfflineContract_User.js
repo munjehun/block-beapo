@@ -34,7 +34,7 @@ function OfflineContractUser() {
   // API불러와서 trade_state값이 2면 대기화면, 3이면 계약체크리스트 화면 출력
   return (
     <>
-      {trade_state == "2" ? (
+      {trade_state == 2 ? (
         <OfflineContractCheckUser
           user_artistname={user_artistname} //작가는 작가명으로 props 내려주고
           trade_user_id={trade_user_id}
