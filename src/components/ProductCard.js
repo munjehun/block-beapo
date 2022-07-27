@@ -115,7 +115,7 @@ function ProductCard({
     }
 
     switch (tradeState) {
-      case "2":
+      case 2:
         if (page == "mypage2") {
           navigate(`/offlineContract_user/${id}/${trade_user_id}`);
         }
