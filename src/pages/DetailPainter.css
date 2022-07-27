@@ -29,6 +29,13 @@
   width: 700px;
   padding: 0 20px;
   /* border: 1px solid darkblue; */
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.painter_detail .purchase_requests .ment_container {
+  display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
