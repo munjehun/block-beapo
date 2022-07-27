@@ -52,6 +52,7 @@ function ContractReservation() {
 
   //예약 진행 API
   const TradeDetail = () => {
+    console.log("tradeDetail axios 전에 콘솔");
     let body = {
       id: id, //작품 id
       trade_user_id: trade_user_id, // 요청자 user_id
