@@ -38,6 +38,7 @@ function OfflineContractCheck({ user_artistname, trade_user_id, id }) {
         withCredentials: true,
       })
       .then((res) => {
+        console.log(res);
         navigate("/NFT_Success");
       })
       .catch((err) => {
