@@ -30,7 +30,7 @@ function OfflineContract() {
         console.log(err);
       });
   };
-  console.log(trade_state);
+  console.log("작가 오프라인 계약 페이지에서의 trade_state : ", trade_state);
   // API불러와서 trade_state값이 2면 대기화면, 3이면 계약체크리스트 화면 출력
   return (
     <>
