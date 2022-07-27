@@ -39,6 +39,8 @@ function SignupPainter() {
     let body = {
       user_id: Id,
       user_pass: Password,
+      user_name: Name,
+      user_birth: Birth,
       user_artistname: artistname,
     };
 
