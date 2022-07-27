@@ -13,7 +13,7 @@ function Nav() {
     axios 
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/user/logout",
+        url: "https://block-in-art.herokuapp.com/api/user/logout",
         withCredentials: true,
       })
       .then((res) => {
