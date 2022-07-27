@@ -37,7 +37,7 @@ function OfflineContract() {
   // API불러와서 trade_state값이 2면 대기화면, 3이면 계약체크리스트 화면 출력
   return (
     <>
-      {trade_state === "2" ? (
+      {trade_state == "2" ? (
         <OfflineContractWaiting id={id} trade_user_id={trade_user_id} />
       ) : (
         <OfflineContractCheck
