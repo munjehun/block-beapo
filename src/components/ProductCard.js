@@ -62,25 +62,25 @@ function ProductCard({
     if (page == "mypage2") {
       console.log("trade_state : ", trade_state);
       switch (trade_state) {
-        case "1":
+        case 1:
           console.log("계약요청");
           setTrade("작가님이 요청 확인중");
           setButtonText("계약 예약 요청 완료");
           break;
 
-        case "2":
+        case 2:
           console.log("작가님 거래 예약 완료");
           setTrade("작가님이 계약 희망중");
           setButtonText("계약 계속 진행");
           break;
 
-        case "3":
+        case 3:
           console.log("계약 확정");
           setTrade("계약 확정");
           setButtonText("작가님이 계약 확정 진행중");
           break;
 
-        case "4":
+        case 4:
           console.log("계약 완료");
           setTrade("　");
           setButtonText("계약 완료");
