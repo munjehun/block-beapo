@@ -59,7 +59,7 @@ function Workregister() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/art/insertArt",
+        url: "https://block-in-art.herokuapp.com/api/art/insertArt",
         data: body,
         withCredentials: true,
       })

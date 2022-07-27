@@ -19,7 +19,7 @@ function OfflineContractUser() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/user/general/detail",
+        url: "https://block-in-art.herokuapp.com/api/user/general/detail",
         data: { id: id},
         withCredentials: true,
       })

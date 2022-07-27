@@ -34,7 +34,7 @@ function OfflineContractCheck({ user_artistname, trade_user_id, id }) {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/trade/artist/confirmContract",
+        url: "https://block-in-art.herokuapp.com/api/trade/artist/confirmContract",
         data: { id: id, trade_user_id: trade_user_id },
         withCredentials: true,
       })

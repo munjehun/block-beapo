@@ -24,7 +24,7 @@ function DetailUser() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/art/artDetail",
+        url: "https://block-in-art.herokuapp.com/api/art/artDetail",
         data: { id: id },
         withCredentials: true,
       })
@@ -43,7 +43,7 @@ function DetailUser() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/trade/buyRequest",
+        url: "https://block-in-art.herokuapp.com/api/trade/buyRequest",
         data: { id: id },
         withCredentials: true,
       })
@@ -75,7 +75,7 @@ function DetailUser() {
       axios
         .request({
           method: "POST",
-          url: "https://localhost:4000/api/user/general/detail",
+          url: "https://block-in-art.herokuapp.com/api/user/general/detail",
           data: { id: id },
           withCredentials: true,
         })

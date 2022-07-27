@@ -16,7 +16,7 @@ function Mypage2() {
     axios
       .request({
         method: "GET",
-        url: "https://localhost:4000/api/user/general/mypage",
+        url: "https://block-in-art.herokuapp.com/api/user/general/mypage",
         withCredentials: true,
       })
       .then((res) => {

@@ -17,7 +17,7 @@ function ContractReservation() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/user/artist/detail",
+        url: "https://block-in-art.herokuapp.com/api/user/artist/detail",
         data: { id: id },
         withCredentials: true,
       })
@@ -38,7 +38,7 @@ function ContractReservation() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/trade/cancleReservation",
+        url: "https://block-in-art.herokuapp.com/api/trade/cancleReservation",
         data: body,
         withCredentials: true,
       })
@@ -59,7 +59,7 @@ function ContractReservation() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/trade/tradeDetail",
+        url: "https://block-in-art.herokuapp.com/api/trade/tradeDetail",
         data: body,
         withCredentials: true,
       })

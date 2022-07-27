@@ -45,7 +45,7 @@ function SignupUser() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/user/join",
+        url: "https://block-in-art.herokuapp.com/api/user/join",
         data: body,
         withCredentials: true,
       })
@@ -63,7 +63,7 @@ function SignupUser() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/user/checkId",
+        url: "https://block-in-art.herokuapp.com/api/user/checkId",
         data: { user_id: Id },
         withCredentials: true,
       })

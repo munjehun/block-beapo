@@ -33,7 +33,7 @@ function OfflineContractCheckUser({ user_artistname, id, trade_user_id }) {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/art/artDetail",
+        url: "https://block-in-art.herokuapp.com/api/art/artDetail",
         data: { id: id },
         withCredentials: true,
       })
@@ -50,7 +50,7 @@ function OfflineContractCheckUser({ user_artistname, id, trade_user_id }) {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/trade/general/confirmContract",
+        url: "https://block-in-art.herokuapp.com/api/trade/general/confirmContract",
         data: { id: id },
         withCredentials: true,
       })

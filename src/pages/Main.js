@@ -22,7 +22,7 @@ function Main() {
     axios
       .request({
         method: "GET",
-        url: "https://localhost:4000/api/art/artList",
+        url: "https://block-in-art.herokuapp.com/api/art/artList",
         withCredentials: true,
       })
       .then((res) => {
