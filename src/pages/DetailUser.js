@@ -52,7 +52,7 @@ function DetailUser() {
           console.log(res.data);
           alert("이미 계약이 요청되었습니다.");
           navigate("/mypage2");
-        } else if (res.data.message === "request success") {
+        } else if (res.data.message == "request success") {
           console.log(res.data);
           alert("계약이 요청되었습니다.");
           navigate("/mypage2");

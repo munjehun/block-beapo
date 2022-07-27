@@ -19,7 +19,7 @@ function DetailPainter() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/user/artist/detail",
+        url: "https://block-in-art.herokuapp.com/api/user/artist/detail",
         data: { id: id },
         withCredentials: true,
       })
@@ -49,7 +49,7 @@ function DetailPainter() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/trade/reservation",
+        url: "https://block-in-art.herokuapp.com/api/trade/reservation",
         data: {
           id: id, //작품 id
           trade_user_id: trade_user_id, // 요청자 user_id
