@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
-import { useNavigate } from "react-router-dom";
 import "./Mypage2.css";
 import axios from "axios";
 
@@ -12,6 +11,7 @@ function Mypage2() {
     getPaintings();
   }, []);
 
+  //그림 정보 받아오는 API
   const getPaintings = () => {
     axios
       .request({
@@ -21,21 +21,21 @@ function Mypage2() {
       })
       .then((res) => {
         setPaintings(res.data.data);
-        console.log("GET 요청 성공");
-        console.log(res);
-        console.log("일반유저 마이페이지 GET 요청 성공");
+        console.log(res.data.data);
       })
       .catch((err) => {
-        console.log("일반유저 마이페이지 GET 요청 실패");
+        console.log(err);
       });
   };
 
+  //어디에 쓸 지 상우님한테 물어보기
   const tradStateSelect = (trade_state) => {
     switch (trade_state) {
       case "1":
         console.log("계약요청");
         setTrade("계약요청 완료");
         break;
+
       case "2":
         console.log("작가님 거래 예약 신청 완료");
         setTrade("작가님이 계약을 희망중!");
@@ -44,6 +44,11 @@ function Mypage2() {
       case "3":
         console.log("계약 확정");
         setTrade("계약 확정");
+        break;
+
+      case "4":
+        console.log("계약 완료");
+        setTrade("계약 완료");
         break;
 
       default:

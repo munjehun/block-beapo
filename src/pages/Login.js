@@ -22,8 +22,6 @@ function Login() {
     if (user_id) {
       console.log("이미 로그인 되었습니다.");
       navigate("/");
-    } else {
-      console.log("로그인 해 주세요.");
     }
     return () => {};
   }, []);
@@ -49,6 +47,7 @@ function Login() {
         withCredentials: true,
       })
       .then((res) => {
+        alert("로그인 되었습니다.");
         const user = res.data.data; //로그인하면 받는 유저 정보
 
         sessionStorage.setItem("user_id", JSON.stringify(user.user_id));
@@ -73,6 +72,7 @@ function Login() {
       })
       .catch((err) => {
         console.log(err);
+        alert("등록되지 않은 계정입니다.");
       });
   };
 

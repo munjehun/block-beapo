@@ -35,7 +35,7 @@ function Main() {
     <div className="main">
       {/* 일반 유저일때는 작품등록하기 버튼이 안 보이도록*/}
       {user_id && user_artistname == null ? (
-        <div>일반 유저 로그인상태의 메인페이지 입니다</div>
+        <div>작품을 구매하고 계약서 NFT를 발행받으세요</div>
       ) : (
         <div className="wellcome_ment">
           <div className="작가님이신가요">
@@ -66,13 +66,14 @@ function Main() {
         */}
 
         {paintings.map((painting) => (
-          <ProductCard // props로 다 ProductCard 컴포넌트에 넘기기!
-            key={painting.id} // 컴포넌트를 map할 때도 key필요!
-            id={painting.id} //작품고유 id를 props로 ProductCard 컴포넌트에 내려주기
+          <ProductCard
+            key={painting.id}
+            id={painting.id}
             picture_name={painting.art_name}
             img={painting.art_image}
             price={painting.art_price}
             artist={painting.art_artist}
+            trade_state={painting.art_state}
             page={"main"}
           />
         ))}

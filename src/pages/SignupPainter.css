@@ -25,6 +25,12 @@
   width: 600px;
 }
 
+/* 중복체크 안내 멘트 */
+.duplicateCheck-ment {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
 .signup_painter .inputs {
   display: flex;
   flex-direction: column;
@@ -65,7 +71,7 @@
   height: 35px;
   padding-left: 10px;
   border-radius: 10px;
-  background-color: rgba(239, 255, 234, 0.932);
+  background-color: rgba(0, 158, 66, 0.144);
   margin: 10px 0;
 }
 
@@ -75,6 +81,7 @@
   width: 100%;
 }
 
+/* 가입하기 버튼 */
 .signup_painter .submit button {
   width: 150px;
   height: 45px;
