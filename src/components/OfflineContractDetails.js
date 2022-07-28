@@ -1,7 +1,7 @@
 import React from "react";
 
 function OfflineContractDetails({
-  user_artistname,
+  art_owner,
   trade_user_id,
   owner_name,
   buyer_name,
@@ -9,17 +9,17 @@ function OfflineContractDetails({
   art_name,
 }) {
   return (
-    <pre className="contractDetail">
+    <div className="contractDetail">
       `매수인과 작가 간의 작품 매매계약서 매수인 '${buyer_name}' (아이디 '$
-      {trade_user_id}', 이하 ‘매수인’)과 작가 ${owner_name}(작가명 $
-      {user_artistname}, 이하 ‘작가’)는 아래와 같이 미술작품의 매매계약을
-      체결한다. 본계약에 명시된 ${buyer_name}, ${owner_name}, ${art_name}, $
-      {art_price}는 클레이튼 네트워크 등록된 본 트랜잭션의 ${buyer_name}, $
-      {owner_name}, ${art_name}, ${art_price}를 말한다. 제1조(목적) 본 계약은
-      매도인인 작가가 매수인에게 미술작품(이하 ‘작품 혹은 ${art_name})’)의
-      소유권을 이전하고 매수인이 작가에게 그 대금을 지급함에 있어서 필요한 제반
-      사항과 당사자의 권리 및 의무를 규율함에 목적이 있다. 제2조(매매 대상 작품)
-      작가(${owner_name})는 클레이튼 네트워크에 등록된 본 트랜잭션에 ${art_name}
+      {trade_user_id}', 이하 ‘매수인’)과 작가 ${owner_name}(작가명 ${art_owner},
+      이하 ‘작가’)는 아래와 같이 미술작품의 매매계약을 체결한다. 본계약에 명시된
+      ${buyer_name}, ${owner_name}, ${art_name}, ${art_price}는 클레이튼
+      네트워크 등록된 본 트랜잭션의 ${buyer_name}, ${owner_name}, ${art_name}, $
+      {art_price}를 말한다. 제1조(목적) 본 계약은 매도인인 작가가 매수인에게
+      미술작품(이하 ‘작품 혹은 ${art_name})’)의 소유권을 이전하고 매수인이
+      작가에게 그 대금을 지급함에 있어서 필요한 제반 사항과 당사자의 권리 및
+      의무를 규율함에 목적이 있다. 제2조(매매 대상 작품) 작가(${owner_name})는
+      클레이튼 네트워크에 등록된 본 트랜잭션에 ${art_name}
       으로 작품명이 명시된 작품 1점을 매수인(${buyer_name})에게 매도한다.
       (지금은 작품 명만 넣는걸로) 제3조(매매대금 및 지급 방법) ① 매수인은
       작가에게 작품 매매대금으로 금 (${art_price})원을 지급한다. 그 구체적인
@@ -90,7 +90,7 @@ function OfflineContractDetails({
       매매대금과 재판매된 작품 매매대금의 차액에 10%를 작가에게 지급한다. 지금
       시점은 작가가 지급을 요청한 시점으로부터 일주일안으로 한다. 본계약의 성립
       및 내용 증명은 클레이튼 네트워크의 본 트랜잭션으로 기록되어 보관된다.`
-    </pre>
+    </div>
   );
 }
 
