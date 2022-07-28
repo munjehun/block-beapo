@@ -28,7 +28,7 @@ function OfflineContract() {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res.data);
+        console.log("오프라인 계약 API 수정 후 : ", res.data);
       })
       .catch((err) => {
         console.log(err);
