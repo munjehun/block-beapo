@@ -17,7 +17,7 @@ function OfflineContract() {
     TradeDetail();
   }, []);
 
-  //예약 진행 API
+  //계약 진행 API
   const TradeDetail = () => {
     let body = {
       id: id, //작품 id
@@ -32,7 +32,7 @@ function OfflineContract() {
       })
       .then((res) => {
         console.log("오프라인 계약 API 수정 후 res.data: ", res.data);
-        console.log("오프라인 계약 API 수정 후 res: ", res.data);
+        console.log("오프라인 계약 API 수정 후 res: ", res);
         setTrade_state(res.data.trade_state);
         setArt_name(res.data.art_name);
         setBuyer_name(res.data.buyer_name);
