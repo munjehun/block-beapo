@@ -79,6 +79,7 @@ function Workregister() {
             <li>
               작품 크기
               <input
+                placeholder="ex) 20*20cm"
                 type="text"
                 value={Size}
                 onChange={(e) => setSize(e.currentTarget.value)}

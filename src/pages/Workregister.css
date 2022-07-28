@@ -25,7 +25,7 @@
 
 .work_about > ul > li {
   font-size: 20px;
-  margin: 70px 0px;
+  margin: 60px 0px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -42,7 +42,7 @@
   width: 50%;
   box-sizing: border-box;
   float: right;
-  margin-top: 100px;
+  margin-top: 70px;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -67,7 +67,7 @@
   border-radius: 30px;
   color: white;
   font-size: 22px;
-  margin-top: 100px;
+  margin-top: 70px;
   font-weight: bold;
 }
 
