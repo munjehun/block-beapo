@@ -16,9 +16,10 @@ function OfflineContractDetails({
       매수인 '{buyer_name}' (아이디 '{trade_user_id}', 이하 ‘매수인’)과 작가 '
       {owner_name}'(작가명 '{art_owner}', 이하 ‘작가’)는 아래와 같이 미술작품의
       매매계약을 체결한다.
+      <br />
       <br /> 본계약에 명시된 '{buyer_name}', '{owner_name}', '{art_name}', '
-      {art_price}'는 클레이튼 네트워크 등록된 본 트랜잭션의 '{buyer_name}', '
-      {owner_name}', '{art_name}', '{art_price}'를 말한다. <br />
+      {art_price}' 는 클레이튼 네트워크 등록된 본 트랜잭션의 '{buyer_name}', '
+      {owner_name}', '{art_name}', '{art_price}' 를 말한다. <br />
       <br /> 제1조(목적) 본 계약은 매도인인 작가가 매수인에게 미술작품(이하
       '작품' 혹은 '{art_name}')의 소유권을 이전하고 매수인이 작가에게 그 대금을
       지급함에 있어서 필요한 제반 사항과 당사자의 권리 및 의무를 규율함에 목적이
