@@ -110,3 +110,12 @@
   background-color: rgb(225, 250, 217);
   margin-left: 20px;
 }
+
+.preview {
+  height: 200px;
+  width: 300px;
+  border: 3px;
+  margin: 60px 60px 0px 150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
