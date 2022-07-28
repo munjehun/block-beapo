@@ -12,6 +12,7 @@ function ProductCard({
   page,
   trade_state,
   trade_user_id,
+  art_state,
 }) {
   const navigate = useNavigate();
   const [trade, setTrade] = useState("");
@@ -22,38 +23,38 @@ function ProductCard({
     setTradeState(trade_state);
 
     if (page == "mypage1") {
-      console.log("trade_state : ", trade_state);
-      switch (trade_state) {
-        case "1":
-          console.log(picture_name);
-          console.log("사용자 -> 작가 요청옴");
-          setTrade("계약요청 완료");
-          setButtonText("작가님이 요청을 확인중!");
-          break;
-
-        case "2":
-          console.log(picture_name);
-          console.log("작가님 거래 예약 신청 완료");
-          setTrade("작가님이 계약을 희망중!");
-          setButtonText("작가님이 계약을 희망중! 계약 계속하러가기");
-          break;
-
-        case "3":
-          console.log(picture_name);
-          console.log("계약 확정");
-          setTrade("계약 확정");
-          setButtonText("계약 확정 진행중");
-          break;
-
-        case "4":
+      console.log("art_state : ", art_state);
+      switch (art_state) {
+        case 1:
           console.log(picture_name);
           console.log("계약 완료");
-          setTrade("계약 완료");
+          setTrade("　"); // 어차피 요청수만 나옴
           setButtonText("계약 완료");
           break;
 
+        // case "2":
+        //   console.log(picture_name);
+        //   console.log("작가님 거래 예약 신청 완료");
+        //   setTrade("작가님이 계약을 희망중!");
+        //   setButtonText("작가님이 계약을 희망중! 계약 계속하러가기");
+        //   break;
+
+        // case "3":
+        //   console.log(picture_name);
+        //   console.log("계약 확정");
+        //   setTrade("계약 확정");
+        //   setButtonText("계약 확정 진행중");
+        //   break;
+
+        // case "4":
+        //   console.log(picture_name);
+        //   console.log("계약 완료");
+        //   setTrade("계약 완료");
+        //   setButtonText("계약 완료");
+        //   break;
+
         default:
-          console.log("not case in trade_state");
+          console.log("거래 가능");
           setButtonText("자세히 보기");
           break;
       }
