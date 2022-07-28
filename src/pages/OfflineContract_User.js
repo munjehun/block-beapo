@@ -52,12 +52,12 @@ function OfflineContractUser() {
       {trade_state == 2 ? (
         <OfflineContractCheckUser
           id={id} // 작품 id
-          art_name={art_name} // 작품 이름
+          trade_user_id={trade_user_id} // 구매자 아이디
           art_owner={art_owner} // 작가명
           owner_name={owner_name} // 작가 이름
-          trade_user_id={trade_user_id} // 구매자 아이디
           buyer_name={buyer_name} // 구매자 이름
           art_price={art_price} // 가격
+          art_name={art_name} // 작품 이름
         />
       ) : trade_state == "3" ? (
         <OfflineContractWaitingUser />

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
 import "./NFT_Success.css";
+import { useLocation } from "react-router";
 import { useNavigate } from "react-router-dom";
 
 function NFT_Success() {
