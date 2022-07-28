@@ -33,6 +33,7 @@
   margin-top: 30px;
   border-radius: 10px;
   padding: 5px;
+  overflow: auto;
 }
 .offlineContract_container .contractDetail--check {
   margin-top: 30px;
