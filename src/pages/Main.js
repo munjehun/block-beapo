@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-//import ProductCard from "../components/ProductCard";
 import "./Main.css";
 import ProductCardnew from "../components/ProductCardnew";
-import ProductCard from "../components/ProductCard";
+// import ProductCard from "../components/ProductCard";
 
 function Main() {
   const user_id = JSON.parse(sessionStorage.getItem("user_id"));

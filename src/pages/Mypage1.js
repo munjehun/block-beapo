@@ -32,34 +32,6 @@ function Mypage1() {
       });
   };
 
-  const tradStateSelect = (trade_state) => {
-    switch (trade_state) {
-      case "1":
-        console.log("계약요청");
-        setTrade("계약요청 완료");
-        break;
-
-      case "2":
-        console.log("작가님 거래 예약 신청 완료");
-        setTrade("작가님이 계약을 희망중!");
-        break;
-
-      case "3":
-        console.log("계약 확정");
-        setTrade("계약 확정");
-        break;
-
-      case "4":
-        console.log("계약 완료");
-        setTrade("계약 완료");
-        break;
-
-      default:
-        console.log("not case in trade_state");
-        break;
-    }
-  };
-
   return (
     <div className="mypage1">
       <div className="wellcome_ment">
@@ -81,7 +53,7 @@ function Mypage1() {
             picture_name={painting.art_name}
             img={painting.art_image}
             requests={painting.Trades.length}
-            trade_state={painting.art_state}
+            art_state={painting.art_state}
             page="mypage1"
           />
         ))}

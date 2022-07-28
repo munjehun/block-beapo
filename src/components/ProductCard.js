@@ -22,7 +22,7 @@ function ProductCard({
   useEffect(() => {
     setTradeState(trade_state);
 
-    if (page == "mypage1") {
+    if (page == mypage1) {
       console.log("art_state : ", art_state);
       switch (art_state) {
         case 1:
