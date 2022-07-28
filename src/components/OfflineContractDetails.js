@@ -14,7 +14,7 @@ function OfflineContractDetails({
       <br />
       <br />
       매수인 '{buyer_name}' (아이디 '{trade_user_id}', 이하 ‘매수인’)과 작가 '
-      {owner_name}'(작가명 {art_owner}, 이하 ‘작가’)는 아래와 같이 미술작품의
+      {owner_name}'(작가명 '{art_owner}', 이하 ‘작가’)는 아래와 같이 미술작품의
       매매계약을 체결한다.
       <br /> 본계약에 명시된 '{buyer_name}', '{owner_name}', '{art_name}', '
       {art_price}'는 클레이튼 네트워크 등록된 본 트랜잭션의 '{buyer_name}', '
