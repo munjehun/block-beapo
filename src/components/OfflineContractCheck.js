@@ -5,13 +5,14 @@ import Spinner from "./Spinner.js";
 import OfflineContractDetails from "./OfflineContractDetails";
 
 function OfflineContractCheck({
-  user_artistname,
   id,
-  trade_user_id,
+  art_name,
+  art_owner,
+  user_artistname,
   owner_name,
+  trade_user_id,
   buyer_name,
   art_price,
-  art_name,
 }) {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -96,7 +97,7 @@ function OfflineContractCheck({
       </div>
 
       <OfflineContractDetails
-        user_artistname={user_artistname} // 작가명
+        art_owner={art_owner} // 작가명
         trade_user_id={trade_user_id} // 구매자 아이디
         owner_name={owner_name} // 작가 이름
         buyer_name={buyer_name} // 구매자 이름
