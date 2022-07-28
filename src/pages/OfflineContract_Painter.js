@@ -7,6 +7,10 @@ import { useParams, useNavigate } from "react-router-dom";
 function OfflineContract() {
   const { id, trade_user_id } = useParams(); // useParams() = 파라미터 값 받아오는 함수
   const [trade_state, setTrade_state] = useState("");
+  const [art_name, setArt_name] = useState("");
+  const [buyer_name, setBuyer_name] = useState("");
+  const [owner_name, setOwner_name] = useState("");
+  const [art_price, setArt_price] = useState("");
   const user_artistname = JSON.parse(sessionStorage.getItem("user_artistname"));
 
   useEffect(() => {
@@ -15,7 +19,6 @@ function OfflineContract() {
 
   //예약 진행 API
   const TradeDetail = () => {
-    console.log("tradeDetail axios 전에 콘솔");
     let body = {
       id: id, //작품 id
       trade_user_id: trade_user_id, // 요청자 user_id
@@ -28,7 +31,13 @@ function OfflineContract() {
         withCredentials: true,
       })
       .then((res) => {
-        console.log("오프라인 계약 API 수정 후 : ", res.data);
+        console.log("오프라인 계약 API 수정 후 res.data: ", res.data);
+        console.log("오프라인 계약 API 수정 후 res: ", res.data);
+        setTrade_state(res.data.trade_state);
+        setArt_name(res.data.art_name);
+        setBuyer_name(res.data.buyer_name);
+        setOwner_name(res.data.owner_name);
+        setArt_price(res.data.art_price);
       })
       .catch((err) => {
         console.log(err);
@@ -44,9 +53,13 @@ function OfflineContract() {
         <OfflineContractWaiting id={id} trade_user_id={trade_user_id} />
       ) : (
         <OfflineContractCheck
-          user_artistname={user_artistname} //작가는 작가명으로 props 내려주고
-          trade_user_id={trade_user_id} // 구매자는 user_id로 props 내려줌.
-          id={id}
+          user_artistname={user_artistname} // 작가명
+          id={id} // 작품 id
+          trade_user_id={trade_user_id} // 구매자 아이디
+          owner_name={owner_name} // 작가 이름
+          buyer_name={buyer_name} // 구매자 이름
+          art_price={art_price} // 가격
+          art_name={art_name} // 작품 이름
         />
       )}
     </>
