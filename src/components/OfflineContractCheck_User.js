@@ -3,7 +3,15 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import OfflineContractDetails from "./OfflineContractDetails";
 
-function OfflineContractCheckUser({ user_artistname, id, trade_user_id }) {
+function OfflineContractCheckUser({
+  user_artistname,
+  id,
+  trade_user_id,
+  owner_name,
+  buyer_name,
+  art_price,
+  art_name,
+}) {
   const navigate = useNavigate();
   const [checkedList, setCheckedList] = useState([]);
   const [allChecked, setAllChecked] = useState(false);
@@ -50,8 +58,9 @@ function OfflineContractCheckUser({ user_artistname, id, trade_user_id }) {
     <div className="offlineContract_container">
       <div className="checklist">
         <label>
-          ▪️ [ {user_artistname} ]님과 [ {trade_user_id} ]님이 오프라인에서 현재
-          작품검수를 완료했나요?&nbsp;&nbsp;
+          ▪️ [ {owner_name}({user_artistname}) ]님과 [ {buyer_name}(
+          {trade_user_id}) ]님이 오프라인에서 현재 작품검수를
+          완료했나요?&nbsp;&nbsp;
           <input
             type="checkbox"
             id="checkBox_1"
@@ -62,8 +71,9 @@ function OfflineContractCheckUser({ user_artistname, id, trade_user_id }) {
           />
         </label>
         <label>
-          ▪️ [ {user_artistname} ]님과 [ {trade_user_id} ]님 상호간 작품 선수금
-          지급이 진행되었나요?&nbsp;&nbsp;
+          ▪️ [ {owner_name}({user_artistname}) ]님과 [ {buyer_name}(
+          {trade_user_id}) ]님 상호간 작품 선수금 지급이
+          진행되었나요?&nbsp;&nbsp;
           <input
             type="checkbox"
             id="checkBox_2"
@@ -74,8 +84,9 @@ function OfflineContractCheckUser({ user_artistname, id, trade_user_id }) {
           />
         </label>
         <label>
-          ▪️ [ {user_artistname} ]님과 [ {trade_user_id} ]님 모두 현재
-          오프라인에서 대면으로 함께 계신가요?&nbsp;&nbsp;
+          ▪️ [ {owner_name}({user_artistname}) ]님과 [ {buyer_name}(
+          {trade_user_id}) ]님 모두 현재 오프라인에서 대면으로 함께
+          계신가요?&nbsp;&nbsp;
           <input
             type="checkbox"
             id="checkBox_3"
