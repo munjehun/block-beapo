@@ -50,28 +50,6 @@ function ContractReservation() {
       });
   };
 
-  //예약 진행 API
-  const TradeDetail = () => {
-    console.log("tradeDetail axios 전에 콘솔");
-    let body = {
-      id: id, //작품 id
-      trade_user_id: trade_user_id, // 요청자 user_id
-    };
-    axios
-      .request({
-        method: "POST",
-        url: "https://block-in-art.herokuapp.com/api/trade/tradeDetail",
-        data: body,
-        withCredentials: true,
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   return (
     <div className="contract_reservation">
       <div className="title">{paintingInfo.art_name}</div>
@@ -87,7 +65,6 @@ function ContractReservation() {
             <button
               className="contract_continue"
               onClick={() => {
-                TradeDetail();
                 navigate(`/offlineContract_painter/${id}/${trade_user_id}`);
               }}
             >

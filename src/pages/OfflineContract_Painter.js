@@ -10,26 +10,31 @@ function OfflineContract() {
   const user_artistname = JSON.parse(sessionStorage.getItem("user_artistname"));
 
   useEffect(() => {
-    getPaintings();
+    TradeDetail();
   }, []);
 
-  //그림 정보 받아오는 API
-  const getPaintings = () => {
+  //예약 진행 API
+  const TradeDetail = () => {
+    console.log("tradeDetail axios 전에 콘솔");
+    let body = {
+      id: id, //작품 id
+      trade_user_id: trade_user_id, // 요청자 user_id
+    };
     axios
       .request({
         method: "POST",
-        url: "https://block-in-art.herokuapp.com/api/user/artist/detail",
-        data: { id: id },
+        url: "https://block-in-art.herokuapp.com/api/trade/tradeDetail",
+        data: body,
         withCredentials: true,
       })
       .then((res) => {
         console.log(res.data);
-        setTrade_state(res.data.data.trade_state);
       })
       .catch((err) => {
         console.log(err);
       });
   };
+
   console.log("작가 오프라인 계약 페이지에서의 trade_state : ", trade_state);
 
   // API불러와서 trade_state값이 2면 대기화면, 3이면 계약체크리스트 화면 출력
