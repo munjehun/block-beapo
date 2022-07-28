@@ -32,7 +32,6 @@ function OfflineContract() {
       })
       .then((res) => {
         console.log("오프라인 계약 API 수정 후 res.data: ", res.data);
-        console.log("오프라인 계약 API 수정 후 res: ", res);
         setTrade_state(res.data.trade_state);
         setArt_name(res.data.art_name);
         setBuyer_name(res.data.buyer_name);
@@ -46,6 +45,7 @@ function OfflineContract() {
   };
 
   console.log("작가 오프라인 계약 페이지에서의 trade_state : ", trade_state);
+  console.log("작가명 :", art_owner);
 
   // API불러와서 trade_state값이 2면 대기화면, 3이면 계약체크리스트 화면 출력
   return (
