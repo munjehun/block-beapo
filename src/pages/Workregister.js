@@ -15,33 +15,14 @@ function Workregister() {
   const [Price, setPrice] = useState("");
   const [preview, setPreview] = useState("");
 
-  const onNameHandler = (event) => {
-    setName(event.currentTarget.value);
-  };
-  const onSizeHandler = (event) => {
-    setSize(event.currentTarget.value);
-  };
-  const onGenreHandler = (event) => {
-    setGenre(event.currentTarget.value);
-  };
-  // const onImageHandler = (event) => {
-  //   setImage(event.currentTarget.value);
-  // };
-  const onDescHandler = (event) => {
-    setDesc(event.currentTarget.value);
-  };
-  const onPriceHandler = (event) => {
-    setPrice(event.currentTarget.value);
-  };
-
   const onSubmitHandler = async () => {
     if (
-      Name.length == 0 ||
-      Size.length == 0 ||
-      Genre.length == 0 ||
-      Image.length == 0 ||
-      Desc.length == 0 ||
-      Price.length == 0
+      Name.length === 0 ||
+      Size.length === 0 ||
+      Genre.length === 0 ||
+      Image.length === 0 ||
+      Desc.length === 0 ||
+      Price.length === 0
     ) {
       alert("정보를 모두 입력해 주세요.");
       return;
@@ -68,10 +49,14 @@ function Workregister() {
         withCredentials: true,
       })
       .then((res) => {
+        alert("작품이 등록되었습니다.");
         navigate("/mypage1");
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.message);
+        if (err.message == "Request failed with status code 401") {
+          alert("로그인을 다시 해주세요.");
+        }
       });
   };
 
@@ -85,11 +70,19 @@ function Workregister() {
           <ul>
             <li>
               작품명
-              <input type="text" value={Name} onChange={onNameHandler} />
+              <input
+                type="text"
+                value={Name}
+                onChange={(e) => setName(e.currentTarget.value)}
+              />
             </li>
             <li>
               작품 크기
-              <input type="text" value={Size} onChange={onSizeHandler} />
+              <input
+                type="text"
+                value={Size}
+                onChange={(e) => setSize(e.currentTarget.value)}
+              />
             </li>
             <li>
               <form>
@@ -99,7 +92,7 @@ function Workregister() {
                     name="genre"
                     type="text"
                     value={Genre}
-                    onChange={onGenreHandler}
+                    onChange={(e) => setGenre(e.currentTarget.value)}
                   >
                     <option value="0">분야를 선택하세요</option>
                     <option value="동양화">동양화</option>
@@ -149,7 +142,7 @@ function Workregister() {
                 cols="35"
                 type="text"
                 value={Desc}
-                onChange={onDescHandler}
+                onChange={(e) => setDesc(e.currentTarget.value)}
               />
             </li>
             <li></li>
@@ -162,14 +155,16 @@ function Workregister() {
               type="number"
               step="10000"
               value={Price}
-              onChange={onPriceHandler}
+              onChange={(e) => setPrice(e.currentTarget.value)}
             />
             원
           </div>
           <div
             className="preview"
             style={{ backgroundImage: `url(${preview})` }}
-          />
+          >
+            미리보기
+          </div>
           <div className="register_button">
             <button type="submit" onClick={onSubmitHandler}>
               작품 등록하기

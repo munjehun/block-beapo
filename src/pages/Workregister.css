@@ -114,8 +114,11 @@
 .preview {
   height: 200px;
   width: 300px;
-  border: 3px;
+  border: none;
+  border-radius: 20px;
   margin: 60px 60px 0px 150px;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center center;
+  background-color: rgb(225, 250, 217);
 }
