@@ -25,6 +25,7 @@ function Mypage1() {
       .then((res) => {
         setPaintings(res.data.data);
         console.log(res.data.data);
+        console.log(res.data.data.art_state);
         //res.data.data = API로 받아온 작가의 그림 목록
       })
       .catch((err) => {
