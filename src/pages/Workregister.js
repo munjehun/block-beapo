@@ -36,12 +36,12 @@ function Workregister() {
 
   const onSubmitHandler = async () => {
     if (
-      Name.length === 0 ||
-      Size.length === 0 ||
-      Genre.length === 0 ||
-      Image.length === 0 ||
-      Desc.length === 0 ||
-      Price.length === 0
+      Name.length == 0 ||
+      Size.length == 0 ||
+      Genre.length == 0 ||
+      Image.length == 0 ||
+      Desc.length == 0 ||
+      Price.length == 0
     ) {
       alert("정보를 모두 입력해 주세요.");
       return;
@@ -63,7 +63,7 @@ function Workregister() {
     axios
       .request({
         method: "POST",
-        url: "https://localhost:4000/api/art/insertArt",
+        url: "https://block-in-art.herokuapp.com/api/art/insertArt",
         data: body,
         withCredentials: true,
       })
