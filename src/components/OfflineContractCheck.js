@@ -47,8 +47,8 @@ function OfflineContractCheck({
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res);
-        navigate("/NFT_Success");
+        console.log(res.data.tx_hash);
+        navigate("/NFT_Success", { state: res.data.tx_hash });
       })
       .catch((err) => {
         console.log(err);

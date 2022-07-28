@@ -18,6 +18,16 @@
   font-size: 25px;
 }
 
+.nft_success .form_container .tx_hash {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 20px;
+  border-bottom: 5px solid rgb(0, 158, 66);
+}
+
 .nft_success .submit {
   display: flex;
   justify-content: center;
