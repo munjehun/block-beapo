@@ -22,7 +22,7 @@ function ProductCard({
   useEffect(() => {
     setTradeState(trade_state);
 
-    if (page == mypage1) {
+    if (page == "mypage1") {
       console.log("art_state : ", art_state);
       switch (art_state) {
         case 1:
@@ -54,6 +54,7 @@ function ProductCard({
         //   break;
 
         default:
+          console.log(picture_name);
           console.log("거래 가능");
           setButtonText("자세히 보기");
           break;
