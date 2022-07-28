@@ -7,7 +7,6 @@ function OfflineContractCheckUser({ user_artistname, id, trade_user_id }) {
   const navigate = useNavigate();
   const [checkedList, setCheckedList] = useState([]);
   const [allChecked, setAllChecked] = useState(false);
-  const [art_owner, setArt_owner] = useState("");
 
   const onCheckedElement = (checked, item) => {
     if (checked) {
@@ -21,7 +20,6 @@ function OfflineContractCheckUser({ user_artistname, id, trade_user_id }) {
 
   //체크박스 유효성 검사
   useEffect(() => {
-    getPaintingInfo();
     if (checkedList.length == 4) {
       //4개 모두 체크돼야 계약하기 버튼 누를 수 있도록
       setAllChecked(true);
@@ -29,23 +27,6 @@ function OfflineContractCheckUser({ user_artistname, id, trade_user_id }) {
       setAllChecked(false);
     }
   }, [checkedList]); //체크 할 때마다 유효성검사
-
-  const getPaintingInfo = () => {
-    axios
-      .request({
-        method: "POST",
-        url: "https://block-in-art.herokuapp.com/api/art/artDetail",
-        data: { id: id },
-        withCredentials: true,
-      })
-      .then((res) => {
-        console.log(res.data.data);
-        setArt_owner(res.data.data.art_owner);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
 
   const contractUser = () => {
     axios
@@ -105,7 +86,14 @@ function OfflineContractCheckUser({ user_artistname, id, trade_user_id }) {
           />
         </label>
       </div>
-      <OfflineContractDetails />
+      <OfflineContractDetails
+        user_artistname={user_artistname} // 작가명
+        trade_user_id={trade_user_id} // 구매자 아이디
+        owner_name={owner_name} // 작가 이름
+        buyer_name={buyer_name} // 구매자 이름
+        art_price={art_price} // 가격
+        art_name={art_name} // 작품 이름
+      />
       <div className="contractDetail--check">
         <label>
           계약 내용을 모두 확인하셨나요?&nbsp;&nbsp;
