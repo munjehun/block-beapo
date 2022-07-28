@@ -10,8 +10,7 @@ function OfflineContractDetails({
 }) {
   return (
     <div className="contractDetail">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;
-      매수인과 작가 간의 작품 매매계약서 &gt;
+      &lt; 매수인과 작가 간의 작품 매매계약서 &gt;
       <br />
       <br />
       매수인 '{buyer_name}' (아이디 '{trade_user_id}', 이하 ‘매수인’)과 작가 '
