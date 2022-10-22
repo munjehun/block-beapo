@@ -1,6 +1,6 @@
 # [block-beapo](https://block-in-art.netlify.app/)
 
-블록인아트 배포용 레포지입니다.
+블록인아트 배포용 레포지입니다. 이미지는 IPFS의 유료정책으로 인해 사용이 중지되어 나오지 않습니다.😨
 ➰ https://block-in-art.netlify.app/
 
 ---
